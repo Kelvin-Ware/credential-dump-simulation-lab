@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.50">
-  <EventFiltering>
-    <ProcessCreate onmatch="include">
-      <Image condition="contains">sliver</Image>
-    </ProcessCreate>
-  </EventFiltering>
-</Sysmon>
-
