@@ -12,9 +12,6 @@
 ## Sysmon
 - Installed Sysmon from official Sysinternals site.
 - Used SwiftOnSecurity's sysmon-config:
-  [https://github.com/SwiftOnSecurity/sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config)
-- Applied config: `sysmon -accepteula -i sysmonconfig-export.xml`
-
-## Screenshot
-_You can upload a screenshot of Sysmon or LimaCharlie sensor running here._
+  [https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml]
+- Applied config: .\sysmon64.exe -accepteula -i C:Windows\Temp\Sysmon\sysmonconfig.xml
 
