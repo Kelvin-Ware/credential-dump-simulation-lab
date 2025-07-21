@@ -1,1 +1,8 @@
 
+LimaCharlie Sensor Installation Notes:
+
+1. Created LimaCharlie organization.
+2. Generated Windows sensor installer package.
+3. Installed sensor on Windows 11 Pro VM.
+4. Confirmed sensor connected and reporting in LimaCharlie dashboard.
+5. Verified events are being collected and logged.
