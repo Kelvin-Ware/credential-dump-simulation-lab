@@ -1,1 +1,19 @@
+<Sysmon schemaversion="4.50">
+  <EventFiltering>
+    <!-- Log process creation -->
+    <ProcessCreate onmatch="include" />
+    
+    <!-- Detect access to lsass.exe (credential dumping) -->
+    <ProcessAccess onmatch="include">
+      <TargetImage condition="is">C:\Windows\System32\lsass.exe</TargetImage>
+    </ProcessAccess>
+
+    <!-- Detect execution of procdump or minidump from Downloads folder -->
+    <ProcessCreate onmatch="include">
+      <Image condition="contains">procdump.exe</Image>
+      <Image condition="contains">minidump.exe</Image>
+      <Image condition="contains">Downloads</Image>
+    </ProcessCreate>
+  </EventFiltering>
+</Sysmon>
 
