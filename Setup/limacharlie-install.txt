@@ -1,8 +1,20 @@
+# Setup - Sysmon & LimaCharlie
 
-LimaCharlie Sensor Installation Notes:
+## Windows Host
+- Windows 11 Pro VM used
+- Joined to LimaCharlie sensor via Windows x64 installer.
 
-1. Created LimaCharlie organization.
-2. Generated Windows sensor installer package.
-3. Installed sensor on Windows 11 Pro VM.
-4. Confirmed sensor connected and reporting in LimaCharlie dashboard.
-5. Verified events are being collected and logged.
+## LimaCharlie Sensor
+- Sensor downloaded from LimaCharlie console.
+- Installed with the appropriate Sensor Key.
+- Confirmed successful connection via console.
+
+## Sysmon
+- Installed Sysmon from official Sysinternals site.
+- Used SwiftOnSecurity's sysmon-config:
+  [https://github.com/SwiftOnSecurity/sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config)
+- Applied config: `sysmon -accepteula -i sysmonconfig-export.xml`
+
+## Screenshot
+_You can upload a screenshot of Sysmon or LimaCharlie sensor running here._
+
