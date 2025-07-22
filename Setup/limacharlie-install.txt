@@ -8,7 +8,7 @@
 - Sensor downloaded from LimaCharlie console.
 - Installed with the appropriate Sensor Key.
 - Confirmed successful connection via console.
-![](credential-dump-simulation-lab/Setup/Screenshots/Limacharlie sensor setup.png)
+![limacharlie sensor](Screenshots/Limacharlie sensor setup.png)
 
 ## Sysmon
 - Installed Sysmon from official Sysinternals site.
