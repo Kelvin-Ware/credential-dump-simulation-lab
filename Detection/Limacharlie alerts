@@ -17,28 +17,28 @@ In this phase, we pivoted into the LimaCharlie console to validate and detect th
 
 > ✅ Legitimate signed binaries are usually benign. But here, our custom payload was unsigned and suspicious by behavior and location.
 
----
+
 
 ### 📁 File System Review
 
-- Navigated to `C:\Users\Administrator\Downloads`
+- Navigated to `C:\Users\localadmin\Downloads`
 - Located the Sliver executable
-- Pulled its hash and searched on [VirusTotal](https://www.virustotal.com)
+- Pulled its hash and searched on [VirusTotal]
   - Not found — expected since it's a freshly compiled payload
 
----
 
-### 📅 Timeline Review — Implant Execution
+
+# 📅 Timeline Review — Implant Execution
 
 - Clicked the **Timeline** tab in the LimaCharlie sensor
 - Filtered using:
-  ```
-  [implant_name]
-  ```
+  
+  [NEW_SHAKEDOWN.exe]
+  
 - Observed the moment of execution, followed by immediate network activity
 - This matched our expected Sliver launch behavior
 
----
+
 
 ### 🧠 LSASS Credential Dump Detection
 
@@ -85,14 +85,6 @@ rules:
 - Used the **"Target Event"** and **"Test Event"** buttons to verify that the rule triggered correctly
 - Detection matched successfully
 
----
-
-### 🎯 Simulating the Attack Again
-
-Deleted the previous dump:
-```
-execute cmd.exe /c del C:\\Windows\\Temp\\lsass.dmp
-```
 
 Then repeated the attack using:
 ```
@@ -103,22 +95,5 @@ Confirmed new detection under the **"Detections"** tab:
 - Detected rule: `LSASS access`
 - Clicked "View Event Timeline" to trace the attack path
 
----
 
-### 📸 Screenshots
-
-- **Unsigned Implant in Process Tree**  
-  ![Unsigned Implant](../screenshots/implant-process.png)
-
-- **File System – Downloads Folder**  
-  ![Downloads Folder](../screenshots/downloads-folder.png)
-
-- **Sensitive Process Access Timeline Event**  
-  ![Sensitive Access](../screenshots/sensitive-access.png)
-
-- **D&R Rule Created in LimaCharlie**  
-  ![DR Rule](../screenshots/detection-rule.png)
-
-- **Detection Alert in LimaCharlie Console**  
-  ![Detection Match](../screenshots/detection-alert.png)
 
