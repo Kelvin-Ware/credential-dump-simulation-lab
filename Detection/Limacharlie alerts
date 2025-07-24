@@ -1,18 +1,18 @@
 ## 🛡️ Detection with LimaCharlie — Sliver Implant & Credential Dumping
 
-In this phase, we pivoted into the LimaCharlie console to validate and detect the Sliver implant and credential dumping activity from our attacker box.
+In this phase, we pivoted into the LimaCharlie console to validate and detect the Sliver implant and credential dumping activity from our attacker VM.
 
 ---
 
 ### 🔍 Process Tree & Network Activity
 
 - Navigated to the **Sensors** tab.
-- Clicked into the active Windows sensor (my target VM).
-- Explored the **Process Tree**, observing legitimate and suspicious processes.
+- Clicked into the active Windows sensor.
+- Explored the *Process Tree*, observing legitimate and suspicious processes.
 - Located the unsigned Sliver implant binary running from:
-  ```
-  C:\Users\Administrator\Downloads\[implant_name].exe
-  ```
+  
+  C:\Users\localadmin\Downloads\NEW_SHAKEDOWN.exe
+  
 - Used the **Network** tab to trace outbound connections from the Sliver implant to the attacker's C2 server.
 
 > ✅ Legitimate signed binaries are usually benign. But here, our custom payload was unsigned and suspicious by behavior and location.
