@@ -20,13 +20,18 @@ This section documents the full process of installing and configuring Sliver C2 
 # From host machine, connect to Ubuntu VM via SSH using the static IP assigned
   >ssh username@<static-ip-address>
 
+  [SSH From Host CMD](./Screenshots/Ububtu%20ssh.png)
+
 # Back on Ubuntu VM via ssh, switch to root user
   >sudo su
 
-# Create a working directory for Sliver installation
+# Create a working directory for Sliver installation (This is where i later saved the payload)
    >mkdir -p /opt/sliver
 
 # Run the official Sliver install script to download and install Sliver binaries
+  >wget https://github.com/BishopFox/sliver/releases/download/v1.5.34/sliver-server_linux -O /usr/local/bin/sliver-server
 
 # Launch the Sliver server to start the backend for managing implants and listeners
   >sliver-server
+
+  [Sliver Launch](./Screenshots/Run%20SLiver.png)
