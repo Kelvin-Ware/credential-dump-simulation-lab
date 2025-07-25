@@ -8,11 +8,15 @@
 - Sensor downloaded from LimaCharlie console.
 - Installed with the appropriate Sensor Key.
 - Confirmed successful connection via console.
-[image alt](./Screenshots/Limacharlie%20sensor%20setup.png)
+    [Limacharlie install](./Screenshots/limacharlie%20install.png)
+    [Limacharlie Sensor install](./Screenshots/Limacharlie%20sensor%20setup.png)
+    [Limacharlie Connection Verification](./Screenshots/Verify%20limacharlie%20connection.png)
 
 ## Sysmon
 - Installed Sysmon from official Sysinternals site.
 - Used SwiftOnSecurity's sysmon-config:
   https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml
 - Applied config: .\sysmon64.exe -accepteula -i C:Windows\Temp\Sysmon\sysmonconfig.xml
-
+    [Sysmon Install](./Screenshots/Sysmon-Install.png)
+    [SwiftOnSecurity Config](./Screenshots/Sysmon%20SwiftOnSecurity%20Config.png)
+    [Verify Sysmon Connection](./Screenshots/Sysmon-Running.png)
