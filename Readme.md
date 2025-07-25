@@ -30,7 +30,7 @@ Simulate a credential dumping attack using a Sliver implant and investigate the 
    - Executed to establish callback
 
 2. **Dumped Credentials on Target**
-   - Used built-in Sliver modules (`minidump`, `procdump`)
+   - Used built-in Sliver modules (`minidump`)
    - Ran credential dumping from `C:\Users\localadmin\Downloads`
 
 3. **Monitored Behavior**
@@ -56,13 +56,5 @@ Simulate a credential dumping attack using a Sliver implant and investigate the 
 
 ---
 
-### 📁 Artifacts
-
-> Add these later if you upload them:
-- Screenshots of LimaCharlie detection
-- Sysmon logs (redacted)
-- IOC list or Sigma rules
-
----
 
 ### ✅ Status: Completed
